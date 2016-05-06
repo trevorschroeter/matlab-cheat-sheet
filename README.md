@@ -1,11 +1,11 @@
-
-For developers who need to convert MATLAB code into "normal" code.
+##MATLAB CHEAT SHEET
+###For developers who need to convert MATLAB code into "normal" code.
 
 
 #### Length
 *Returns the number of rows in a matrix or vector*
 
-**MATLAB example**
+######MATLAB example
 
 ```
 n = length(matrixA);
@@ -16,7 +16,7 @@ ___
 #### Row Sums
 *Returns a vector containing the sums of each row*
 
-**MATLAB example**
+######MATLAB example
 
 ```
 Rowsum_Vector = sum(A,2);  
@@ -34,7 +34,7 @@ ___
 #### Column Sums
 *Returns a vector containing the sums of each column*
 
-**MATLAB example**
+######MATLAB example
 
 ```
 ColumnSum_vector = sum(matrixA,1);
@@ -45,7 +45,7 @@ ___
 #### Matrix Transposition
 *Returns a transposed matrix*
 
-**MATLAB example**
+######MATLAB example
 
 ```
 TransposedMatrix = (A)’;
@@ -62,7 +62,7 @@ ___
 #### Vector Division
 *Returns a vector in which each value has been divided by a constant*
 
-**Matlab Example**
+######Matlab Example
 
 ```
 VectorB = VectorA/ConstantA
@@ -75,13 +75,13 @@ ___
 ####Loop Iteration
 *Loop iteration is expressed as (startingValue, incrementByValue, endValue) where endValue is generally expressed as a function of the length of the vector being iterated*
 
-**MATLAB example**
+######MATLAB example
 ```
 for y = 1:1:n
 	for x1 = 1:1:n
 ```
 
-**C# equivalent**
+######C# equivalent
 ```
 for (int row = 0; row < rowCount; row++)
             { 
@@ -90,13 +90,13 @@ for (int row = 0; row < rowCount; row++)
 	}
 ```
 	
-**Another MATLAB example**
+######Another MATLAB example
 ```
 for u2= 1:1:n-1
     for v2= u2+1:1:n
 ```
 
-**C# equivalent**
+######C# equivalent
 ```
 for(var row = 0; i< rowCount -1; row++) 
 	{ 
@@ -111,7 +111,7 @@ ___
 
 *Copy values > 0 from one matrix to another (values < 0 become 0)*
 
-**MATLAB example**
+######MATLAB example
 ```
 for y = 1:1:n
    for x = 1:1:n
@@ -128,13 +128,13 @@ ___
 ####Data Validation
 *Check for NaN or infinite values, change to 0*
 
-**MATLAB example**
+######MATLAB example
 ```
 F(isnan(F)) = 0;
 F(isinf(F)) = 0;
 ```
 
-**C# equivalent**
+######C# equivalent
 ```
 for(var row = 0; i< rowCount -1; row++) 
 	{ 
@@ -151,12 +151,12 @@ ___
 ###Logarithm
 *Calculate the natural logarithm of each value in a matrix*
 
-**MATLAB example**
+######MATLAB example
 ```
 matrix = log(matrixA);
 ```
 
-**C# equivalent**
+######C# equivalent
 ```
 for(var row = 0; i< rowCount -1; row++) 
 	{ 
@@ -185,12 +185,12 @@ ___
 *Returns a matrix where each value xy is the product of elements xy in the two original matrices.
 The Matlab notation for Hadamard products is often confused with the notation for a scalar product (aka, dot product).  Don’t make this mistake.*
 
-**MATLAB example**
+######MATLAB example
 ```
 matrixC = matrixA.*matrixB;
 ```
 
-**C# equivalent**
+######C# equivalent
 ```
 for(var row = 0; i< rowCount -1; row++) 
 	{ 
@@ -206,12 +206,12 @@ ___
 ####Scalar product (aka dot product) of vectors
 *Returns the scalar product of two vectors*
 
-**MATLAB example**
+######MATLAB example
 ```
 vectorC = dot(vectorA,vectorB);
 ```
 
-**C# equivalent**
+######C# equivalent
 ```
 int result = 0;
 for(int i = 0; i<vectorLength;i++)
@@ -224,7 +224,7 @@ ___
 ####Scalar product (aka dot product) of matrices 
 *Returns a vector of scalar products where each column is treated as a vector, and the result is the scalar product of each column*
 
-**MATLAB example**
+######MATLAB example
 ```
 vectorC = dot(matrixA, matrixB); 
 ```
@@ -243,7 +243,7 @@ vectorC[i] = dot(matrixA(:,i),matrixB(:,i);
  
 To calculate a vector of the scalar product of two matrices where rows are treated as vectors, the MATLAB method is overloaded with a value for the dimension
 
-**MATLAB example**
+######MATLAB example
 ```
 vectorC = dot(matrixA, matrixB, 2);
 ```
